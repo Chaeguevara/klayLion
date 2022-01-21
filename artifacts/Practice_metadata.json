@@ -21,8 +21,13 @@
 			},
 			{
 				"constant": true,
-				"inputs": [],
-				"name": "owner",
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenOwner",
 				"outputs": [
 					{
 						"name": "",
@@ -34,13 +39,85 @@
 				"type": "function"
 			},
 			{
-				"constant": true,
-				"inputs": [],
-				"name": "getTotalSupply",
+				"constant": false,
+				"inputs": [
+					{
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "tokenURI",
+						"type": "string"
+					}
+				],
+				"name": "mintWithTokenURI",
 				"outputs": [
 					{
 						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "id",
 						"type": "uint256"
+					},
+					{
+						"name": "uri",
+						"type": "string"
+					}
+				],
+				"name": "setTokenUri",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenURIs",
+				"outputs": [
+					{
+						"name": "",
+						"type": "string"
 					}
 				],
 				"payable": false,
@@ -48,24 +125,37 @@
 				"type": "function"
 			},
 			{
-				"constant": false,
-				"inputs": [
+				"constant": true,
+				"inputs": [],
+				"name": "symbol",
+				"outputs": [
 					{
-						"name": "newSupply",
-						"type": "uint256"
+						"name": "",
+						"type": "string"
 					}
 				],
-				"name": "setTotalSupply",
-				"outputs": [],
 				"payable": false,
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"constant": true,
+				"inputs": [
+					{
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "ownedTokens",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
 				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "constructor"
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -89,9 +179,9 @@
 	},
 	"sources": {
 		"Practice.sol": {
-			"keccak256": "0xae539dac268043ce402a05ba1a9503e94e3220d3103cfa28a4509b1b1cfc0848",
+			"keccak256": "0xe84f1db164548b97485c28e7ab464aa59c000e643d88e8a5511526dae477eec0",
 			"urls": [
-				"bzzr://12bb2a61f1fa019e114b63d7fc4970d1a3942089cc8dab8cb5897ad498369f3f"
+				"bzzr://58d857695d37189665064421bcc0f375ee0e297dc684bf3a4e58471d6a32904a"
 			]
 		}
 	},

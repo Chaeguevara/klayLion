@@ -1,7 +1,7 @@
 //Klaytn IDE uses solidity 0.4.24, 0.5.6 versions.
 pragma solidity >=0.4.24 <=0.5.6;
 
-contract Practice{
+contract NFTSimple{
     string public name = "KlayLion";
     string public symbol = "KL";
 
@@ -29,11 +29,11 @@ contract Practice{
     function _removeTokenFromList(address from, uint256 tokenId) private{
         // [10, 15, 19, 20] -> 19번 삭제
         // 1. 19번 찾음 -> 20 swap -> 길이를 짧게
+        uint256 lastTokenIdex = _ownedTokens[from].length-1;
         for(uint256 i=0; i<_ownedTokens[from].length;i++){
             if(tokenId == _ownedTokens[from][i]){
-                uint256 temp = tokenId;
-                tokenId = _ownedTokens[from][i];
-                _ownedTokens[from][i] = temp;
+                _ownedTokens[from][i] = _ownedTokens[from][lastTokenIdex];
+                _ownedTokens[from][lastTokenIdex] = tokenId;
                 break;
             }
         }
@@ -53,5 +53,12 @@ contract Practice{
     }
     function setTokenUri(uint256 id, string memory uri) public {
         tokenURIs[id] = uri;
+    }
+}
+
+contract NFTMarket{
+    function buyNFT(uint256 tokenId, address NFTAddress, address to) public returns (bool){
+        NFTSimple(NFTAddress).safeTransferFrom(address(this), to, tokenId);
+        return true;
     }
 }

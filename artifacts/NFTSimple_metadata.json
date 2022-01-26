@@ -167,7 +167,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"Practice.sol": "Practice"
+			"NFTSimple.sol": "NFTSimple"
 		},
 		"evmVersion": "constantinople",
 		"libraries": {},
@@ -178,10 +178,10 @@
 		"remappings": []
 	},
 	"sources": {
-		"Practice.sol": {
-			"keccak256": "0xd759d5b72d1288b37d01a26ac79a23d51b4dcb334828de70470457cbba3a78fb",
+		"NFTSimple.sol": {
+			"keccak256": "0xaf69157bdaa661b71cb02378a4b4eb8376ea5833885c9599b2a15467bd50ed91",
 			"urls": [
-				"bzzr://eb2207cc68291adf6b94bf9cbfa587043a07a444d48e885f1f47ccc6f6b35fd5"
+				"bzzr://9ff9b2d5e40883ebafe29ce5dd74c1a099c157f0aa34d26fc4f8533f0ee7302a"
 			]
 		}
 	},

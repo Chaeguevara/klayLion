@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.5.6+commit.b259423e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "NFTAddress",
+						"type": "address"
+					},
+					{
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "buyNFT",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"NFTSimple.sol": "NFTMarket"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"NFTSimple.sol": {
+			"keccak256": "0xaf69157bdaa661b71cb02378a4b4eb8376ea5833885c9599b2a15467bd50ed91",
+			"urls": [
+				"bzzr://9ff9b2d5e40883ebafe29ce5dd74c1a099c157f0aa34d26fc4f8533f0ee7302a"
+			]
+		}
+	},
+	"version": 1
+}

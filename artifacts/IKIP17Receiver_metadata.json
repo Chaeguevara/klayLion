@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.5.6+commit.b259423e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "operator",
+						"type": "address"
+					},
+					{
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "data",
+						"type": "bytes"
+					}
+				],
+				"name": "onKIP17Received",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bytes4"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface for any contract that wants to support safeTransfers from KIP17 asset contracts.see http://kips.klaytn.com/KIPs/kip-17-non_fungible_token",
+			"methods": {
+				"onKIP17Received(address,address,uint256,bytes)": {
+					"details": "The KIP17 smart contract calls this function on the recipient after a `safeTransfer`. This function MUST return the function selector, otherwise the caller will revert the transaction. The selector to be returned can be obtained as `this.onKIP17Received.selector`. This function MAY throw to revert and reject the transfer. Note: the KIP17 contract address is always the message sender.",
+					"params": {
+						"data": "Additional data with no specified format",
+						"from": "The address which previously owned the token",
+						"operator": "The address which called `safeTransferFrom` function",
+						"tokenId": "The NFT identifier which is being transferred"
+					},
+					"return": "bytes4 `bytes4(keccak256(\"onKIP17Received(address,address,uint256,bytes)\"))`"
+				}
+			},
+			"title": "KIP17 token receiver interface"
+		},
+		"userdoc": {
+			"methods": {
+				"onKIP17Received(address,address,uint256,bytes)": {
+					"notice": "Handle the receipt of an NFT"
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"KIP17Token.sol": "IKIP17Receiver"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"KIP17Token.sol": {
+			"keccak256": "0xec64ebdbc8dd5fd1f362dbbd301d20f2991646f3ddac1a37a653b0f912b6fd1e",
+			"urls": [
+				"bzzr://bd0c7503faa6e9083cd49fad395816c1b9128db8822dd6e7143271909f3795ea"
+			]
+		}
+	},
+	"version": 1
+}

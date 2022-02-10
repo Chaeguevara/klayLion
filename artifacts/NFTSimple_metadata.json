@@ -42,28 +42,6 @@
 				"constant": false,
 				"inputs": [
 					{
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"name": "tokenId",
-						"type": "uint256"
-					}
-				],
-				"name": "safeTransferFrom",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
-				"inputs": [
-					{
 						"name": "to",
 						"type": "address"
 					},
@@ -156,6 +134,32 @@
 				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "safeTransferFrom",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -179,9 +183,9 @@
 	},
 	"sources": {
 		"NFTSimple.sol": {
-			"keccak256": "0xaf69157bdaa661b71cb02378a4b4eb8376ea5833885c9599b2a15467bd50ed91",
+			"keccak256": "0x0cc79b7b368dc5669a59fba99bec6189bff5427505db4a7d8c7b0f6acab99414",
 			"urls": [
-				"bzzr://9ff9b2d5e40883ebafe29ce5dd74c1a099c157f0aa34d26fc4f8533f0ee7302a"
+				"bzzr://d9d55ed6a19023959f04718ffe5782e6f7575350075a184a2ead66375db7e68d"
 			]
 		}
 	},
